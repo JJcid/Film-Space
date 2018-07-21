@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(App\Requirements::class, function (Faker $faker) {
+$factory->define(filmSpace\Requirements::class, function (Faker $faker) {
     return [
         //
     ];

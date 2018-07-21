@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace filmSpace\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace filmSpace;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 

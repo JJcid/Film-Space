@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(filmSpace\Review::class, function (Faker $faker) {
+$factory->define(App\Review::class, function (Faker $faker) {
     return [
         //
     ];

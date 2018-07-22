@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(filmSpace\Role::class, function (Faker $faker) {
+$factory->define(App\Role::class, function (Faker $faker) {
     return [
         //
     ];

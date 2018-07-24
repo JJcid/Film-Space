@@ -13,21 +13,18 @@ class CreateCoursesTable extends Migration
      */
     public function up()
     {
-        Schema::create('courses', function (Blueprint $table) {
+        Schema::create('films', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('teacher_id');
-            $table->foreign('teacher_id')->references('id')->on('teachers');
             $table->unsignedInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->unsignedInteger('level_id');
-            $table->foreign('level_id')->references('id')->on('levels');
             $table->string('name');
+            $table->timestamp('launch_date');
             $table->text('description');
             $table->string('slug');
             $table->string('picture')->nullable();
-            $table->enum('estatus', [\App\Course::PUBLISHED, \App\Course::PENDING, \App\Course::REJECTED])->default(\App\Course::PENDING);
-            $table->boolean('previous_approved')->default(false);
-            $table->boolean('previous_rejected')->default(false);
+            $table->boolean('subscription_plan', [\App\Film::SUBSCRIPTION, \App\Film::NO_SUBSCRIPTION])->default(\App\Film::NO_SUBSCRIPTION);
+            $table->float('sale_price');
+            $table->float('rent_price');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -40,6 +37,6 @@ class CreateCoursesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('courses');
+        Schema::dropIfExists('films');
     }
 }

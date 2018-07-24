@@ -22,9 +22,11 @@ class CreateUsersTable extends Migration
 
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('role_id')->default(\App\Role::STUDENT);
+            $table->unsignedInteger('role_id')->default(\App\Role::USER);
             $table->foreign('role_id')->references('id')->on('roles');
             $table->string('name');
+            $table->string('last_name')->nullable();
+            $table->string('slug');
             $table->string('email')->unique();
             $table->string('password');
             $table->string('picture')->nullable();

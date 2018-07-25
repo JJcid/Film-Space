@@ -16,7 +16,7 @@ class CreateReviewsTable extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('film_id');
-            $table->foreign('film_id')->references('id')->on('courses');
+            $table->foreign('film_id')->references('id')->on('films');
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->float('rating', 2);

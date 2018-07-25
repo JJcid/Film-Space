@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCoursesTable extends Migration
+class CreateFilmsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -22,9 +22,10 @@ class CreateCoursesTable extends Migration
             $table->text('description');
             $table->string('slug');
             $table->string('picture')->nullable();
-            $table->boolean('subscription_plan', [\App\Film::SUBSCRIPTION, \App\Film::NO_SUBSCRIPTION])->default(\App\Film::NO_SUBSCRIPTION);
+            $table->boolean('subscription_plan')->default(\App\Film::NO_SUBSCRIPTION);
             $table->float('sale_price');
             $table->float('rent_price');
+            $table->boolean('subscription');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -26,4 +26,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function role() {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function socialAccount() {
+        return $this->hasOne(UserSocialAccount::class);
+    }
+
+    public function transactions() {
+        return $this->hasMany(Transaction::class)->select('id', 'user_id');
+    }
 }

@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/set_laguage/{lang}', 'Controller@setLamguage')->name('set_language');
+Route::get('login/{social_network_name}', 'Auth\LoginController@redirectToProvider')->name('social_auth');
+Route::get('login/{social_network_name}/callback', 'Auth\LoginController@handleProviderCallback');
+
 Route::get('/', function () {
     return view('welcome');
 });

@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
 
         factory(\App\Category::class, 6)->create();
 
-        factory(\App\Film::class, 200)->create();
+        factory(\App\Film::class, 20)->create();
 
         factory(\App\User::class, 1)->create([
             'name' => 'admin',
@@ -42,6 +42,8 @@ class DatabaseSeeder extends Seeder
             'role_id' => \App\Role::USER
         ]);
 
-        factory(\App\User::class, 50)->create(['role_id' => \App\Role::USER]);
+        factory(\App\User::class, 10)->create(['role_id' => \App\Role::USER]);
+
+        factory(\App\Review::class, 20)->create();
     }
 }

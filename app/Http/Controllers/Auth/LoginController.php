@@ -41,6 +41,12 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    public function logout(Request $request) {
+        auth()->logout();
+        session()->flush();
+        return redirect('/login');
+    }
+
     public function redirectToProvider(string $social_network_name)
     {
         return Socialite::driver($social_network_name)->redirect();

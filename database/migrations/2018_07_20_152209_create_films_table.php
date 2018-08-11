@@ -22,7 +22,6 @@ class CreateFilmsTable extends Migration
             $table->text('description');
             $table->string('slug');
             $table->string('picture')->nullable();
-            $table->boolean('subscription_plan')->default(\App\Film::NO_SUBSCRIPTION);
             $table->float('sale_price');
             $table->float('rent_price');
             $table->boolean('subscription');

@@ -24,7 +24,7 @@
 </head>
 <body>
     <div id="app">
-        @include('partials.navigation');
+        @include('partials.navigation')
         <main class="py-4">
             @if(session('message'))
                 <div class="row justify-content-center">

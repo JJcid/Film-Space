@@ -10513,6 +10513,39 @@ a.text-dark:focus {
   width: auto !important;
 }
 
+.card.pt-5 {
+  color: white;
+  background-color: rgba(95, 65, 41, 0.61);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+  text-shadow: 2px 6px 3px #5f4129;
+  -webkit-animation: animatedBackground 1000s linear infinite;
+          animation: animatedBackground 1000s linear infinite;
+}
+
+@-webkit-keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+
+  /*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: -10000px 0;
+  }
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+
+  /*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: -10000px 0;
+  }
+}
+
 body {
   font-family: 'Hind Vadodara', sans-serif;
 }
@@ -10529,7 +10562,7 @@ main {
 }
 
 header .navbar-laravel {
-  background-color: #8a138a;
+  background-color: #a79485;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
@@ -10591,7 +10624,7 @@ header .navbar-laravel .navbar-brand {
 
 .btn-course,
 .btn-course:hover {
-  background-color: #8a138a;
+  background-color: #a79485;
   color: #fff;
 }
 
@@ -10608,30 +10641,30 @@ header .navbar-laravel .navbar-brand {
 }
 
 .badge-box > i {
-  background-color: #8a138a !important;
+  background-color: #a79485 !important;
 }
 
 .page-item.active .page-link {
   z-index: 1;
   color: #fff;
-  background-color: #8a138a;
+  background-color: #a79485;
   border-color: #1b1e21;
 }
 
 .page-link,
 .page-link:hover {
-  color: #8a138a;
+  color: #a79485;
 }
 
 .btn-subscribe,
 .btn-subscribe:hover {
-  background-color: #8a138a !important;
+  background-color: #a79485 !important;
   color: #fff;
   font-size: 24px !important;
 }
 
 .bg-light {
-  border: 1px solid #8a138a;
+  border: 1px solid #a79485;
   text-align: center;
 }
 

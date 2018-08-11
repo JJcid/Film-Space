@@ -4,7 +4,7 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Film::class, function (Faker $faker) {
 
-    $name = $faker->sentence;
+    $name = $faker->sentence(3);
 
     return [
         'category_id' => \App\Category::all()->random()->id,

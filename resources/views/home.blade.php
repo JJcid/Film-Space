@@ -1,5 +1,9 @@
 @extends('layouts.app')
-
+@section('jumbotron')
+    @include('partials.jumbotron', [
+        'title' => __('Accede a nuestro plan de suscripción'),
+        'icon' => 'film'
+    ])
 @section('content')
 <div class="pl-5 pr-5">
     <div class="row justify-content-center">

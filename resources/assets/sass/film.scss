@@ -38,3 +38,23 @@
 .card-01.height-fix .card-img-top {
   width: auto !important;
 }
+
+.card.pt-5 {
+  color: white;
+  background-color: rgba(95, 65, 41, 0.61);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+  text-shadow: 2px 6px 3px rgb(95, 65, 41);
+  animation: animatedBackground 1000s linear infinite;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+/*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: -10000px 0;
+  }
+}

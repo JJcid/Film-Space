@@ -39,9 +39,9 @@
   width: auto !important;
 }
 
-.card.pt-5 {
+.card.pt-5.animate {
   color: white;
-  background-color: rgba(95, 65, 41, 0.61);
+  background: rgba(95, 65, 41, 0.61);
   background-repeat: repeat;
   background-position: 0 0;
   background-size: auto 100%;
@@ -49,11 +49,15 @@
   animation: animatedBackground 1000s linear infinite;
 }
 
+.card.pt-5{
+  background: linear( rgba(95, 65, 41, 0.3), rgba(95, 65, 41, 0.5), rgba(95, 65, 41, 0.8));
+}
+
 @keyframes animatedBackground {
   from {
     background-position: 0 0;
   }
-/*use negative width if you want it to flow right to left else and positive for left to right*/
+
   to {
     background-position: -10000px 0;
   }

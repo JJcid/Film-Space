@@ -9,6 +9,8 @@ class Film extends Model
     const NO_SUBSCRIPTION = 0;
     const SUBSCRIPTION = 1;
 
+    protected $withCount = ['reviews'];
+
     public function category() {
         return $this->belongsTo(Category::class)->select('id', 'name');
     }
@@ -28,4 +30,18 @@ class Film extends Model
     public function getRatingAttribute() {
         return $this->reviews->avg('rating');
     }
+
+    public function getRouteKeyName() {
+        return 'slug';
+    }
+
+    public function relatedFilms() {
+        return Film::with('reviews')
+        ->whereCategoryId($this->category->id)
+        ->where('id', '!=', $this->id)
+        ->latest()
+        ->limit(5)
+        ->get();
+    }
+
 }

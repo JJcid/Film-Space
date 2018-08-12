@@ -4,6 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * App\Film
+ *
+ * @property-read \App\Category $category
+ * @property-read mixed $rating
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Review[] $reviews
+ * @mixin \Eloquent
+ */
 class Film extends Model
 {
     const NO_SUBSCRIPTION = 0;

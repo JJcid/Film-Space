@@ -4,6 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * App\Transaction
+ *
+ * @property-read \App\Transaction_type $type
+ * @property-read \App\User $user
+ * @mixin \Eloquent
+ */
 class Transaction extends Model
 {
     public function user() {

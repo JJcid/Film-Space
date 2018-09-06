@@ -12,6 +12,7 @@
                     <h5>{{ __("Fecha de publicación") }}: {{ $film->created_at->format('d/m/Y') }}</h5>
                     <h6>{{ __("Número de valoraciones") }}: {{ $film->reviews_count }}</h6>
                     @include('partials.films.rating', ['rating' => $film->custom_rating])
+                    @include('partials.films.action_button')
                 </div>
             </div>
         </div>

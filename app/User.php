@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
+use Laravel\Cashier\Billable;
 /**
  * App\User
  *
@@ -13,10 +13,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @property-read \App\UserSocialAccount $socialAccount
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Transaction[] $transactions
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Laravel\Cashier\Subscription[] $subscriptions
  */
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, Billable;
 
     protected static function boot () {
         parent::boot();

@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/set_laguage/{lang}', 'Controller@setLanguage')->name('set_language');
+Route::get('/set_language/{lang}', 'Controller@setLanguage')->name('set_language');
 Route::get('login/{social_network_name}', 'Auth\LoginController@redirectToProvider')->name('social_auth');
 Route::get('login/{social_network_name}/callback', 'Auth\LoginController@handleProviderCallback');
 Route::get('/home', 'HomeController@index')->name('home');

@@ -32,7 +32,7 @@ class Film extends Model
     }
 
     public function pathAttachment() {
-        echo asset('films/' . $this->picture);
+        echo asset('storage/films/' . $this->picture);
     }
 
     public function getRatingAttribute() {

@@ -1,6 +1,5 @@
 <div class="col-12">
   @auth
-
       @can('isInSubscriptionPlan', \App\Film::class)
         @can('suscribed')
           <a class="btn btn-subscribe btn-bottom btn-block" href="#">
@@ -22,7 +21,6 @@
             </a>
         @endcan
       @endcan
-    @endcan
   @else
     <a class="btn btn-subscribe btn-bottom btn-block" href="{{route('login')}}">
         <i class="fa fa-user"></i> {{ __('Acceder')}}

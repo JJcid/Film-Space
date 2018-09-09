@@ -5,6 +5,7 @@ namespace App\Policies;
 use App\User;
 use App\Film;
 use App\Role;
+use App\Subscriptions;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class FilmPolicy
@@ -24,7 +25,11 @@ class FilmPolicy
     }
 
     public function subscribed(User $user, Film $film) {
-        return true;
+        if(auth()->user()->subscribed('main')) {
+            return true;
+        }
+
+        return false;
     }
 
     public function view_film () {

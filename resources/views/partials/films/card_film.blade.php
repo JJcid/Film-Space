@@ -17,7 +17,7 @@
             {{ str_limit($film->description, 100) }}
         </p>
         <a
-            href="#"
+            href="{{ route('films.detail', $film->slug )}}"
             class="btn btn-course btn-block"
         >
             {{ __("Más información") }}

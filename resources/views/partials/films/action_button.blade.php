@@ -1,12 +1,12 @@
 <div class="col-12">
   @auth
-      @can('isInSubscriptionPlan', \App\Film::class)
-        @can('suscribed')
+      @can('isInSubscriptionPlan', $film)
+        @can('subscribed', $film)
           <a class="btn btn-subscribe btn-bottom btn-block" href="#">
             <i class="fa fa-bolt"></i> {{ __('Ver')}}
           </a>
         @else
-            <a class="btn btn-subscribe btn-bottom btn-block" href="#">
+            <a class="btn btn-subscribe btn-bottom btn-block" href="{{ route('subscriptions.plans')  }}">
                 <i class="fa fa-bolt"></i> {{ __('Suscribirme y ver')}}
             </a>
         @endcan

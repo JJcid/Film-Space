@@ -24,7 +24,7 @@ class Film extends Model
     }
 
     public function isInSubscriptionPlan() {
-        return $this->subscription_plan;
+        return $this->subscription;
     }
 
     public function reviews() {

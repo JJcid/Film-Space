@@ -1,3 +1,7 @@
 {
-  "Socialite": "Entrar con Socialite"
+  "Socialite": "Entrar con Socialite",
+  "main": "Principal",
+  "monthly": "Mensual",
+  "quarterly": "Trimestral",
+  "yearly": "Anual"
 }

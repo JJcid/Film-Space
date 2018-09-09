@@ -21,6 +21,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    @stack('styles')
 </head>
 <body>
     <div id="app">
@@ -30,13 +31,18 @@
             @if(session('message'))
                 <div class="row justify-content-center">
                     <div class="col-md-10">
-                        <div class="alert alert-{{session('message')[0]}}"></div>
-                        <h4 class="alert-heading">{{ __(session('message')[1])}}</h4>
+                        <div class="alert alert-{{session('message')[0]}}">
+                            <h4 class="alert-heading">{{ __(session('message')[1])}}</h4>
+                        </div>
                     </div>
                 </div>
             @endif
             @yield('content')
         </main>
     </div>
+
+    {{-- Scripts --}}
+
+    @stack('scripts')
 </body>
 </html>

@@ -11,6 +11,9 @@
 //Films
 @import 'film';
 
+// Related Films
+@import "related";
+
 body {
   font-family: 'Hind Vadodara', sans-serif;
 }
@@ -75,17 +78,17 @@ header .navbar-laravel {
   color: #fff;
 }
 
-.btn-more-info-course {
+.btn-more-info-film {
   background-color: #F3AF59;
   color: #fff;
 }
 
-.btn-more-info-course:hover {
+.btn-more-info-film:hover {
   background-color: #F3AF59;
   color: #fff;
 }
 
-.btn-course, .btn-course:hover {
+.btn-film, .btn-film:hover {
   background-color: $app-bg-color;
   color: #fff;
 }

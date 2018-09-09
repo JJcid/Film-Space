@@ -10533,6 +10533,7 @@ a.text-dark:focus {
           box-shadow: 0px 1px 20px 1px black;
   filter: grayscale(50%) sepia(0.29) contrast(109%) invert(11%);
   -webkit-filter: grayscale(50%) sepia(0.29) contrast(109%) invert(11%);
+  min-width: 250px;
 }
 
 .film-text {
@@ -10557,6 +10558,75 @@ a.text-dark:focus {
   to {
     background-position: -10000px 0;
   }
+}
+
+.media {
+  background: #fff;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.media img {
+  width: 200px;
+  margin: 0;
+  height: 136px;
+}
+
+.media-body {
+  border: 1px solid #bcbcbc;
+  border-left: 0;
+  height: 136px;
+}
+
+.media .price {
+  float: left;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 600;
+  color: #4765AB;
+}
+
+.media .price small {
+  display: block;
+  font-size: 17px;
+  color: #232323;
+}
+
+.media .stats {
+  float: left;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.media .stats span {
+  float: left;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.media .stats span i {
+  margin-right: 7px;
+  color: #4765AB;
+}
+
+.media .address {
+  float: left;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 5px;
+  color: #888;
+}
+
+.media .fav-box {
+  position: absolute;
+  right: 10px;
+  font-size: 20px;
+  top: 4px;
+  color: #E74C3C;
+}
+
+.map-box {
+  background-color: #A3CCFF;
 }
 
 body {
@@ -10626,18 +10696,18 @@ header .navbar-laravel .navbar-brand {
   color: #fff;
 }
 
-.btn-more-info-course {
+.btn-more-info-film {
   background-color: #F3AF59;
   color: #fff;
 }
 
-.btn-more-info-course:hover {
+.btn-more-info-film:hover {
   background-color: #F3AF59;
   color: #fff;
 }
 
-.btn-course,
-.btn-course:hover {
+.btn-film,
+.btn-film:hover {
   background-color: #beb89d;
   color: #fff;
 }

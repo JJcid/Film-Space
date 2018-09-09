@@ -13,7 +13,6 @@ class SubscriptionController extends Controller
             if(auth()->user()->subscribed('main')) {
                 return redirect('/')->with('message', ['warning', __("Actualmente tienes un plan de suscripción")]);
             }
-
             return $next($request);
         })
         ->only(['plans', 'processSubscription']);

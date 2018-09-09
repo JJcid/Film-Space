@@ -5,8 +5,10 @@
         alt="{{ $film->name }}"
     />
     <div class="card-body">
-        <span class="badge-box"><i class="fa fa-check"></i></span>
-        <h4 class="card-title">{{ $film->name }}</h4>
+        @if($film->isInSubscriptionPlan())
+            <span class="badge-box"><i class="fa fa-film"></i></span>
+        @endif
+        <h4 class="card-title">{{ str_limit($film->name, 15) }}</h4>
         <hr />
         <div class="row justify-content-center">
             @include('partials.films.rating')
@@ -14,13 +16,13 @@
         <hr />
         <span class="badge badge-danger badge-cat">{{ $film->category->name }}</span>
         <p class="card-text">
-            {{ str_limit($film->description, 100) }}
+            {{ str_limit($film->description, 75) }}
         </p>
         <a
             href="{{ route('films.detail', $film->slug )}}"
-            class="btn btn-course btn-block"
+            class="btn btn-film btn-block"
         >
-            {{ __("Más información") }}
+            <i class="fa fa-play-circle"> Mostrar más detalles </i>
         </a>
     </div>
 </div>

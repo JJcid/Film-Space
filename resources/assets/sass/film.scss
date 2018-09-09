@@ -53,6 +53,11 @@
   background-repeat: repeat-y;
 }
 
+.bg-black{
+    background-color: black;
+    box-shadow: 1px 7px 13px black;
+}
+
 .poster {
   box-shadow: 0px 1px 20px 1px black;
   filter: grayscale(50%) sepia(0.29) contrast(109%) invert(11%);

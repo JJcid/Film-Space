@@ -3,7 +3,7 @@
         <div class="container">
 
             <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name') }}
+                <i class="fa fa-film"></i> Film-Space
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -30,6 +30,11 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/resume', 'SubscriptionController@resume')->name('subscriptions.resume');
         Route::post('/cancel', 'SubscriptionController@cancel')->name('subscriptions.cancel');
     });
+
+    Route::group(['prefix' => "invoices"], function() {
+        Route::get('/admin', 'InvoiceController@admin')->name('invoices.admin');
+        Route::get('/{invoice}/download', 'InvoiceController@download')->name('invoices.download');
+    });
 });
 
 Route::group(["prefix" => "profile", "middleware" => ["auth"]], function() {

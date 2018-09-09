@@ -10528,6 +10528,12 @@ a.text-dark:focus {
   background-repeat: repeat-y;
 }
 
+.bg-black {
+  background-color: black;
+  -webkit-box-shadow: 1px 7px 13px black;
+          box-shadow: 1px 7px 13px black;
+}
+
 .poster {
   -webkit-box-shadow: 0px 1px 20px 1px black;
           box-shadow: 0px 1px 20px 1px black;

@@ -31,9 +31,4 @@ class FilmPolicy
 
         return false;
     }
-
-    public function view_film () {
-//        TODO if subscription plan is active return true else return false
-    }
-
 }

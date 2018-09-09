@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-12">
         <div class="card film-card col-md-12" style="background-image: url('{{ url('/images/jumbotron_film.png') }}')">
-            <div class="text-white text-center d-sm-block d-md-flex align-content-center py-5 px-4 my-5">
+            <div class="text-white text-center d-sm-block d-md-flex align-content-center py-5 px-4 my-5 bg-black">
                 <div class="text-center">
                     <img class="img-fluid poster" src="{{ $film->pathAttachment() }}" />
                 </div>
